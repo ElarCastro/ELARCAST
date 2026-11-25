@@ -692,6 +692,51 @@
   body.android #libPerm.need{display:block}
   body.android .list li{padding-top:5px;padding-bottom:5px}
   body.android input, body.android select{font-size:16px}
+  /* TV en Android: reserva el ancho para el nombre completo del canal y deja el programa en una segunda línea. */
+  body.android #scrWin.tvInline{height:clamp(150px,24vh,230px) !important;min-height:0;display:flex;flex-direction:column;border-radius:12px;overflow:hidden}
+  body.android.tvbrowse #mainSlot{display:none !important}
+  body.android #scrWin.tvInline > .titlebar, body.android #scrWin.tvInline > .foot, body.android #scrWin.tvInline > .mgrip{display:none}
+  body.android #scrWin.tvInline .scr{flex:1;min-height:0;border:1px solid #263967;border-radius:10px;background:linear-gradient(125deg,#0e3858,#182047 55%,#40205f)}
+  #tvPreviewIdle{display:none;position:absolute;inset:0;align-items:center;justify-content:center;color:#f5f7ff;font:600 16px Roboto,"Segoe UI",Arial,sans-serif;background:radial-gradient(circle at 18% 35%,rgba(0,220,255,.15),transparent 28%),linear-gradient(125deg,rgba(13,40,69,.72),rgba(43,25,76,.78));pointer-events:none}
+  #tvPreviewIdle.on{display:flex}
+  body.android #scrWin.tvInline .scr:has(#tvPreviewIdle.on) #fx{visibility:hidden}
+  #tvPreviewIdle .tvLiveBadge{position:absolute;left:14px;top:12px;border-radius:20px;background:#10152b;padding:6px 11px;font-size:11px;letter-spacing:.06em}
+  #tvPreviewIdle .tvPlayIcon{position:absolute;left:8%;top:50%;transform:translateY(-50%);font-size:clamp(42px,12vw,86px);color:#56d0e5;text-shadow:0 0 28px #268ba7}
+  #tvPreviewIdle .tvPreviewCopy{display:flex;flex-direction:column;align-items:center;gap:7px;text-align:center;padding:12px 18px 12px 24%}
+  #tvPreviewIdle .tvPreviewCopy b{font-size:clamp(14px,4vw,22px);letter-spacing:.12em}
+  #tvPreviewIdle .tvPreviewCopy span{font-size:13px;color:#a9bbdf}
+  #tvPreviewIdle .tvPreviewCopy small{font-size:11px;color:#a9bbdf}
+  body.android #libWin.tvcompact .libside,body.android #libWin.tvcompact .libsplit,body.android #libWin.tvcompact .libpanes{display:none !important}
+  body.android #libWin.tvcompact .libmain{flex:1 1 auto;min-width:0}
+  body.android #libWin.tvcompact .tvBrowse{display:flex;gap:8px;margin:5px 6px}
+  body.android #libWin .tvBrowse[hidden]{display:none !important}
+  body.android #libWin.tvcompact .tvBrowse select{min-width:0;flex:1;height:40px;padding:0 10px;border-radius:8px;background:#151e39;color:#f3f6ff;border:1px solid #334779;font:600 14px Roboto,"Segoe UI",Arial,sans-serif}
+  body.android #libWin.tvcompact .librow{margin:4px 6px}
+  body.android #libWin.tvcompact .librow label{display:none}
+  body.android #libWin.tvcompact .librow input{height:40px;padding:0 12px;border-radius:8px;background:#090d1a;color:#fff;border:1px solid #293b63;font:14px Roboto,"Segoe UI",Arial,sans-serif}
+  body.android #libWin.tvcompact .theadw{padding:0 7px;border-bottom:1px solid #273755}
+  body.android #libWin.tvcompact .thead{font:700 11px Roboto,"Segoe UI",Arial,sans-serif;letter-spacing:.08em;color:#91a6d2;background:transparent}
+  body.android #libWin.tvcompact .thead > .t{flex:1 1 65%;width:auto}
+  body.android #libWin.tvcompact .thead > .d{flex:0 1 35%;width:auto;min-width:0;text-align:right}
+  body.android #libWin.tvcompact .thead > .a,
+  body.android #libWin.tvcompact .thead > .al{display:none}
+  body.android #libWin.tvcompact .thead > .t{flex:0 0 60%;width:60%}
+  body.android #libWin.tvcompact .thead > .d{flex:1 1 40%;width:auto;min-width:0}
+  body.android #libWin.tvcompact #libList li[data-l]{display:block;width:100%;min-width:0;box-sizing:border-box;padding:7px 9px;white-space:normal;border-bottom:1px solid rgba(130,160,220,.16)}
+  body.android #libWin.tvcompact #libList li[data-l] > .a,
+  body.android #libWin.tvcompact #libList li[data-l] > .al{display:none}
+  body.android #libWin.tvcompact #libList li[data-l] > .t{display:block;width:auto;flex:none;overflow:visible;text-overflow:clip;white-space:normal;overflow-wrap:anywhere;font:700 15px/20px Roboto,"Segoe UI",Arial,sans-serif;color:inherit}
+  body.android #libWin.tvcompact #libList li[data-l] > .t .fav{font:700 17px/20px Arial,sans-serif;margin-right:6px}
+  body.android #libWin.tvcompact #libList li[data-l] > .t .vi{font-size:15px;margin-right:6px}
+  body.android #libWin.tvcompact #libList li[data-l].sel{background:#17284a;border:1px solid #08d9ed;border-radius:8px}
+  body.android #libWin.tvcompact #libList li[data-l] > .d{display:block;width:auto;min-width:0;flex:none;margin:3px 0 0 27px;overflow:visible;text-overflow:clip;white-space:normal;font:12px/17px Roboto,"Segoe UI",Arial,sans-serif;color:var(--help,#a6b4d3)}
+  body.android #libWin.tvcompact #libList li[data-l] > .d:empty{display:none}
+  body.android #libWin.tvcompact #libList li[data-l].sel > .d{color:inherit;opacity:.9}
+  body.android #libWin.tvcompact .foot{display:flex;align-items:center;gap:8px;padding:6px;margin:0;background:#0a0e1c;border-top:1px solid #273755}
+  body.android #libWin.tvcompact .foot #libAdd,body.android #libWin.tvcompact .foot #libPlayAll,body.android #libWin.tvcompact .foot #libChk,body.android #libWin.tvcompact .foot #libHistClr,body.android #libWin.tvcompact .foot #libHideL{display:none !important}
+  body.android #libWin.tvcompact .foot #libPlay{flex:1;height:40px;border-radius:8px;background:linear-gradient(120deg,#12cfe3,#2160c8);color:#061227;font:700 15px Roboto,"Segoe UI",Arial,sans-serif}
+  body.android #libWin.tvcompact .foot #libAudio{height:40px;border-radius:8px}
+  body.android #libWin.tvcompact .foot .count{flex:none;color:#20dcec;font:700 12px Roboto,"Segoe UI",Arial,sans-serif}
   #libPerm{display:none;margin:6px;padding:10px;border:1px solid var(--lcd,#0f0);color:var(--lcd,#0f0);background:#000;font:14px VT323,monospace;text-align:center}
   #libPerm button{margin-top:8px}
 </style>
@@ -789,6 +834,7 @@
       <img id="cover" alt="">
       <video id="vid" muted playsinline preload="auto"></video>
       <div id="scrMsg"></div>
+      <div id="tvPreviewIdle" aria-live="polite"><span class="tvLiveBadge">● EN VIVO</span><span class="tvPlayIcon">▶</span><div class="tvPreviewCopy"><b>VISTA DEL CANAL</b><span id="tvPreviewName">Elige un canal para empezar</span><small>Toca un canal y pulsa REPRODUCIR</small></div></div>
       <div id="pipPh"><b>⧉</b><span>El video se está viendo en la ventana flotante</span><i id="pipTtl"></i><button class="cbtn" id="pipBack" title="Cierra la ventana flotante y regresa el video aquí">⧉ REGRESAR EL VIDEO AQUÍ</button></div>
     </div>
     <div class="foot">
@@ -1369,6 +1415,7 @@
       <div class="libsplit" id="libSplit" title="Arrastra para cambiar el ancho del árbol (doble clic: tamaño original)"></div>
       <div class="libmain">
         <div id="libPerm">Para ver la música y los videos de tu celular, ELARCAST necesita permiso.<br><button class="cbtn" id="libPermB">PERMITIR ACCESO</button></div>
+        <div class="row tvBrowse" id="tvBrowse" hidden><select id="tvSourceSel" aria-label="Lista de canales"></select><select id="tvCategorySel" aria-label="Categoría"></select></div>
         <div class="libpanes" id="libPanes">
           <div><div class="ph">Artista</div><ul id="libArts" class="list"></ul></div>
           <div><div class="ph">Álbum</div><ul id="libAlbs" class="list"></ul></div>
@@ -1499,9 +1546,10 @@
     'sPrev','sPlay','sNext','sGhost','sRestore','eqWin','eqOn','eqPreset','eqReset','eqCurve','eqs',
     'plWin','plTitle','plSel','pNew','pSave','pSaveAs','pDel','nameRow','nameInput','nameOk','nameCancel','addInput','bAdd','plList','bUp','bDown','bRem','bClear','plInfo',
     'bMp3','bMp3All','bMp3Dir','resWin','resTitle','resList','bResAll','bResClose','optWin','themes','oGhost','oAlpha','oAlphaV','oTop','oProg','oDock','oMediaDir','oYtUpd','oYtTxt','oAppUpd','oAppTxt','oSpId','oSpLogin','oSpLists','oSpOut','oSpTxt','oSpGuide','oSpRedir','warn',
-    'bVid','bLib','bal','eqLevel','eqSaveP','eqDelP','eqNameRow','eqName','eqNameOk','eqNameNo','scrWin','scr','fx','cover','vid','scrMsg','mFx','mVid','mCov','mTv','mFav','libGuide','fxSel','fxAuto','subSel','bFull','bPip','mRecW','recInd','recWin','updWin','updTtl','updVer','updNotes','updSt','updGo','updWeb','updLater','updNo','oUpdAsk',
+    'bVid','bLib','bal','eqLevel','eqSaveP','eqDelP','eqNameRow','eqName','eqNameOk','eqNameNo','scrWin','scr','fx','cover','vid','scrMsg','tvPreviewIdle','tvPreviewName','tvBrowse','tvSourceSel','tvCategorySel','mFx','mVid','mCov','mTv','mFav','libGuide','fxSel','fxAuto','subSel','bFull','bPip','mRecW','recInd','recWin','updWin','updTtl','updVer','updNotes','updSt','updGo','updWeb','updLater','updNo','oUpdAsk',
     'jumpRow','jumpQ','jumpX','plAct','libWin','libTitle','libQ','libList','libAdd','libScan','libDirB','libInfo','libTree','libPanes','libArts','libAlbs','libPlay','libAudio','libPlayAll','libSplit','libChk','libHistClr','libHide','libHideL','djWin','bDj','colL','colR','oLayout','oSepAll','oJoinAll','oTvLists','oWebList','oWebName','oWebUrl','oWebAdd','oTvName','oTvUrl','oTvAdd','oTvFile','oTvReset','oTvXtL','oTvXt','oTvXs','oTvXu','oTvXp','oTvXAdd','oXfade','oSleep','oSleepLeft'];
   const el = {}; ids.forEach(i => el[i] = document.getElementById(i));
+  const tvScrParent=el.scrWin.parentElement, tvScrNext=el.scrWin.nextElementSibling;
 
   // ---------- Datos ----------
   const EQF = [60, 170, 310, 600, 1000, 3000, 6000, 12000, 14000, 16000];
@@ -2593,6 +2641,18 @@ mp3Busy = true; msg(`${video ? 'Video' : 'MP3'}: ${n} ${n > 1 ? 'descargas' : 'd
   let mobPrev = null;
   function mobFix() {
     const keys = MOB.map(m => m[1]).concat(['showHelp']);
+    const splitTv = !!(S.showScr && S.showLib && el.libWin.classList.contains('tvcompact'));
+    document.body.classList.toggle('tvbrowse',splitTv);
+    if (splitTv) {
+      if (el.scrWin.parentElement!==el.libWin.parentElement) el.libWin.parentElement.insertBefore(el.scrWin,el.libWin);
+      keys.forEach(k => { S[k] = k === 'showScr' || k === 'showLib'; });
+      S.mobTab = 'showScr'; S.showDj = false; S.showRec = false; S.showUpd = false;
+      el.scrWin.classList.add('tvInline'); mobPrev = {}; keys.forEach(k => mobPrev[k] = !!S[k]);
+      const bar = document.getElementById('mobTabs'); if(bar) bar.querySelectorAll('button').forEach(b=>b.classList.toggle('on',b.dataset.k==='showScr'||b.dataset.k==='showLib'));
+      requestAnimationFrame(mobFit); return;
+    }
+    else if (el.scrWin.parentElement!==tvScrParent) tvScrParent.insertBefore(el.scrWin,tvScrNext);
+    el.scrWin.classList.remove('tvInline');
     const now = {}; keys.forEach(k => now[k] = !!S[k]);
     let pick = S.mobTab && keys.includes(S.mobTab) ? S.mobTab : 'showPl';
     if (mobPrev) { const opened = keys.filter(k => now[k] && !mobPrev[k]); if (opened.length) pick = opened[opened.length - 1]; else if (!now[pick]) pick = 'showPl'; }
@@ -2609,11 +2669,12 @@ mp3Busy = true; msg(`${video ? 'Video' : 'MP3'}: ${n} ${n > 1 ? 'descargas' : 'd
   function mobFit() {
     if (!ANDROID) return;
     const z = mobZoom();
+    const splitTv = S.showScr && S.showLib && el.libWin.classList.contains('tvcompact');
     const w = [el.plWin, el.resWin, el.libWin, el.scrWin, el.eqWin, el.optWin, el.helpWin].find(x => x && !x.hidden);
     const vh = window.visualViewport ? window.visualViewport.height : window.innerHeight;
     const used = el.main.getBoundingClientRect().height + 6 + 62;
-    const h = Math.max(160, Math.floor((vh - used) / z) - 4);
-    [el.plWin, el.resWin, el.libWin, el.scrWin, el.optWin, el.helpWin].forEach(x => { if (!x) return; x.style.height = x === w ? h + 'px' : ''; x.classList.toggle('sized', x === w); });
+    const h = Math.max(160, Math.floor((vh - used) / z) - 4), ph=Math.max(150,Math.min(220,Math.floor(vh*.22/z)));
+    [el.plWin, el.resWin, el.libWin, el.scrWin, el.optWin, el.helpWin].forEach(x => { if (!x) return; const hh=splitTv?(x===el.scrWin?ph:x===el.libWin?Math.max(190,h-ph-6):0):(x===w?h:0); x.style.height=hh?hh+'px':''; x.classList.toggle('sized',splitTv?(x===el.scrWin||x===el.libWin):x===w); });
   }
   if (ANDROID) {
     const bar = document.createElement('nav'); bar.id = 'mobTabs';
@@ -2622,6 +2683,8 @@ mp3Busy = true; msg(`${video ? 'Video' : 'MP3'}: ${n} ${n > 1 ? 'descargas' : 'd
     bar.addEventListener('click', e => {
       const b = e.target.closest('button'); if (!b) return;
       const k = b.dataset.k;
+      if (S.showScr && S.showLib && el.libWin.classList.contains('tvcompact') && (k === 'showScr' || k === 'showLib')) { S.showScr = k === 'showScr'; S.showLib = k === 'showLib'; S.mobTab = k; applyPanels(); save(); return; }
+      if (el.libWin.classList.contains('tvcompact') && S.mobTab && (k === 'showScr' || k === 'showLib') && !(S.showScr && S.showLib)) { S.showScr=true; S.showLib=true; S.mobTab='showScr'; applyPanels(); save(); return; }
       if (S[k] && !S.showHelp) { if (k === 'showRes') { try { el.addInput.focus(); } catch (e) {} } return; }
       // se usa el mismo botón del reproductor (así se cargan la biblioteca, el video, etc.)
       const btn = { showPl: el.bPl, showEq: el.bEq, showScr: el.bVid, showLib: el.bLib, showOpt: el.bOpt }[k];
@@ -2642,6 +2705,7 @@ mp3Busy = true; msg(`${video ? 'Video' : 'MP3'}: ${n} ${n > 1 ? 'descargas' : 'd
   }
   function applyPanels() {
     if (ANDROID) mobFix();
+    el.scrWin.classList.toggle('tvInline',!!(ANDROID&&S.showScr&&S.showLib&&el.libWin.classList.contains('tvcompact')));
     el.eqWin.hidden = !S.showEq; el.plWin.hidden = !S.showPl; el.optWin.hidden = !S.showOpt; el.helpWin.hidden = !S.showHelp; el.bHelp.classList.toggle('on', !!S.showHelp); el.scrWin.hidden = !S.showScr; el.libWin.hidden = !S.showLib; el.djWin.hidden = !S.showDj; el.bDj.classList.toggle('on', !!S.showDj); el.recWin.hidden = !S.showRec; el.resWin.hidden = !S.showRes; if (!el.resWin.hidden && !el.resList.childElementCount) try { renderResults(); } catch (e) {} el.updWin.hidden = !S.showUpd; if (typeof recPaint === 'function') try { recPaint(); } catch (e) {}
     el.bEq.classList.toggle('on', S.showEq); el.bPl.classList.toggle('on', S.showPl); el.bOpt.classList.toggle('on', S.showOpt);
     el.bVid.classList.toggle('on', S.showScr); el.bLib.classList.toggle('on', S.showLib);
@@ -3492,6 +3556,7 @@ mp3Busy = true; msg(`${video ? 'Video' : 'MP3'}: ${n} ${n > 1 ? 'descargas' : 'd
   function hasVideo() { const it = curItem(); return !!(it && vidFor === it.id && (el.vid.getAttribute('src') || hlsOf.has(el.vid))); }
   function scrLayer() {
     const m = S.scrMode;
+    if (el.tvPreviewIdle) { const it=curItem(), tv=ANDROID && m==='tv'; el.tvPreviewIdle.classList.toggle('on',tv && !hasVideo()); el.tvPreviewName.textContent=it && isTv(it) ? nameOf(it) : 'Selecciona un canal de la lista'; }
     el.scr.classList.toggle('v', showsVid() && hasVideo());
     el.scr.classList.toggle('c', m === 'cov' && coverFor && el.cover.dataset.ok === '1');
     [el.mFx, el.mVid, el.mCov, el.mTv].forEach(b => b.classList.toggle('on', b === { fx: el.mFx, vid: el.mVid, cov: el.mCov, tv: el.mTv }[m]));
@@ -3887,6 +3952,7 @@ mp3Busy = true; msg(`${video ? 'Video' : 'MP3'}: ${n} ${n > 1 ? 'descargas' : 'd
     if (k === 'rsearch' || ((k === 'ytl' || k === 'ytr') && !keep)) el.libQ.value = '';
     libPanesRender(); libRender();
     if (isTvNode(k)) epgEnsure(k.startsWith('tvl:') ? [S.tvLists[+k.slice(4)]] : S.tvLists, () => { if (S.libNode === k) libRender(); });
+    if (ANDROID && isTvNode(k)) applyPanels();
   }
   function paneFill(ul, list, sel, allLabel) {
     const frag = document.createDocumentFragment();
@@ -3929,6 +3995,7 @@ mp3Busy = true; msg(`${video ? 'Video' : 'MP3'}: ${n} ${n > 1 ? 'descargas' : 'd
   }
   function libRender() {
     if (!lib) return;
+    if (ANDROID && el.libWin.classList.contains('tvcompact')) tvBrowseRender();
     if (S.libNode === 'tvguide') { guideRender(); return; }
     const q = S.libNode === 'rsearch' ? '' : norm(el.libQ.value.trim()), words = q ? q.split(/\s+/) : [];
     const hideDead = S.hideDead && chkNode(S.libNode || 'all');
@@ -3978,6 +4045,17 @@ mp3Busy = true; msg(`${video ? 'Video' : 'MP3'}: ${n} ${n > 1 ? 'descargas' : 'd
     const d = k.startsWith('tvl:') && tvData[tvKey(S.tvLists[+k.slice(4)])];
     if (d && d.date && libSrc.length) el.libInfo.title = (d.err ? d.err + ' · ' : '') + 'Lista leída el ' + d.date + '. Para bajarla de nuevo: Preferencias › En vivo › Internet TV › ACTUALIZAR.';
   }
+  function tvBrowseRender() {
+    const src=document.getElementById('tvSourceSel'),cat=document.getElementById('tvCategorySel'); if(!src||!cat)return;
+    const k=S.libNode||'tv', options=[['tv','Todos los canales'],['tvfav','Favoritos'],...S.tvLists.map((x,i)=>['tvl:'+i,x.name]),['ytl','YouTube en vivo']];
+    src.replaceChildren(...options.map(([v,n])=>{const o=document.createElement('option');o.value=v;o.textContent=n;return o;}));
+    src.value=options.some(x=>x[0]===k)?k:'tv';
+    const cats=['*',...libArtList.map(x=>x[0])];
+    cat.replaceChildren(...cats.map((v,i)=>{const o=document.createElement('option');o.value=v;o.textContent=i===0?'Todas las categorías':v;return o;}));
+    cat.value=cats.includes(libArtSel)?libArtSel:'*';
+  }
+  document.getElementById('tvSourceSel')?.addEventListener('change',e=>libSelectNode(e.target.value));
+  document.getElementById('tvCategorySel')?.addEventListener('change',e=>{libArtSel=e.target.value;libAlbSel='*';libPanesRender();libRender();});
   function libSetSel(i, scroll) {
     libSel = i;
     el.libList.querySelectorAll('li.sel').forEach(li => li.classList.remove('sel'));
@@ -4035,6 +4113,18 @@ mp3Busy = true; msg(`${video ? 'Video' : 'MP3'}: ${n} ${n > 1 ? 'descargas' : 'd
   })();
   function libHeads(k) {
     el.libAudio.hidden = k !== 'ytl';
+    const compactTv = ANDROID && (isTvNode(k) || k === 'ytl');
+    el.libWin.classList.toggle('tvcompact', compactTv);
+    if (el.tvBrowse) el.tvBrowse.hidden = !compactTv;
+    if (ANDROID && compactTv) { S.scrMode='tv'; S.showScr=true; S.showLib=true; S.mobTab='showScr'; }
+    else if (ANDROID && el.scrWin.classList.contains('tvInline')) S.showScr=false;
+    if (ANDROID) {
+      const list = k.startsWith('tvl:') ? S.tvLists[+k.slice(4)] : null;
+      const label = k === 'ytl' ? 'YOUTUBE EN VIVO' : k === 'tvfav' ? 'FAVORITOS' : list ? list.name : 'CANALES';
+      el.libTitle.textContent = compactTv ? 'TV EN VIVO · ' + label.toUpperCase()
+        : Array.isArray(lib?.dirs) && lib.dirs.length > 1 ? 'BIBLIOTECA · ' + lib.dirs.length + ' CARPETAS'
+        : lib?.dir ? 'BIBLIOTECA · ' + lib.dir.toUpperCase() : 'BIBLIOTECA';
+    }
     if (k === 'tva' || k === 'webm') {
       const ph = el.libPanes.querySelectorAll('.ph'), th = el.libWin.querySelector('.thead');
       ph[0].textContent = 'Categoría'; ph[1].textContent = 'Fuente';
@@ -4061,9 +4151,10 @@ mp3Busy = true; msg(`${video ? 'Video' : 'MP3'}: ${n} ${n > 1 ? 'descargas' : 'd
     }
     const tv = isTvNode(k), ph = el.libPanes.querySelectorAll('.ph'), th = el.libWin.querySelector('.thead');
     ph[0].textContent = tv ? 'Categoría' : 'Artista'; ph[1].textContent = tv ? 'Lista' : 'Álbum';
-    th.children[0].textContent = tv ? 'Categoría' : 'Artista'; th.children[1].textContent = tv ? 'Canal' : 'Título'; th.children[2].textContent = tv ? 'Lista' : 'Álbum'; th.children[3].textContent = tv ? 'Ahora' : 'Dur.'; th.children[3].classList.toggle('ep', tv); el.libList.classList.toggle('tvl', tv); colsApply();
-    el.libQ.placeholder = tv ? 'nombre del canal, categoría o lista…' : 'título, artista, álbum o carpeta…';
+    th.children[0].textContent = tv ? 'Categoría' : 'Artista'; th.children[1].textContent = tv ? 'Canal' : 'Título'; th.children[2].textContent = tv ? 'Lista' : 'Álbum'; th.children[3].textContent = tv ? (ANDROID ? 'Programa' : 'Ahora') : 'Dur.'; th.children[3].classList.toggle('ep', tv); el.libList.classList.toggle('tvl', tv); colsApply();
+    el.libQ.placeholder = tv ? (ANDROID ? 'buscar canal o programa…' : 'nombre del canal, categoría o lista…') : 'título, artista, álbum o carpeta…';
     el.libPlay.title = tv ? 'Ver el canal elegido' : 'Escuchar la canción elegida';
+    if (ANDROID && compactTv) requestAnimationFrame(()=>{mobFix();mobFit();scrChanged();});
   }
 
   // ---------- Internet TV: listas de canales (M3U) ----------
