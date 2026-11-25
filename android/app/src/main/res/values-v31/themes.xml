@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Android 12+: la pantalla de inicio del sistema con el logo de ELARCAST sobre negro -->
+    <style name="ElarcastTheme" parent="@android:style/Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_fondo</item>
+        <item name="android:statusBarColor">@color/elarcast_negro</item>
+        <item name="android:navigationBarColor">@color/elarcast_negro</item>
+        <item name="android:windowSplashScreenBackground">@color/elarcast_negro</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@mipmap/ic_launcher_foreground</item>
+    </style>
+</resources>

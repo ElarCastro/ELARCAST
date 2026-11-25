@@ -1,0 +1,31 @@
+FICHA DE GOOGLE PLAY - ELARCAST
+================================
+
+Nombre de la app (máx. 30 caracteres):
+ELARCAST Multimedia Player
+
+Descripción breve (máx. 80 caracteres):
+Música, videos, TV en vivo y radios en un reproductor moderno y personalizable.
+
+Descripción completa (máx. 4000 caracteres):
+ELARCAST - MULTIMEDIA PLAYER reúne en una sola app todo lo que quieres escuchar y ver.
+
+• Música del celular: tu biblioteca organizada por artista y álbum, con listas de reproducción, repetir y aleatorio.
+• Videos: reproduce tus videos y míralos a pantalla completa.
+• TV en vivo: canales abiertos por internet organizados por país, idioma y categoría, con guía de programación.
+• Radios por internet: busca emisoras por país y género y guarda tus favoritas.
+• Ecualizador de 10 bandas con ajustes predefinidos (Rock, Pop, Latino, Más graves, Voz y más).
+• Visualizaciones que bailan con la música.
+• Sigue sonando en segundo plano y se controla desde la notificación o la pantalla de bloqueo.
+• Temas de color, incluido el tema ELARCAST en negro, azul eléctrico, cian y violeta.
+
+Creación: Elar Castro con la IA.
+
+Categoría sugerida: Música y audio
+Correo de contacto: (completar)
+Política de privacidad (URL): (obligatoria en Google Play; completar)
+
+Recursos gráficos en esta carpeta:
+- icono_512x512.png ........... icono de la tienda (PNG 512 x 512)
+- grafico_destacado_1024x500.png  gráfico destacado (PNG 1024 x 500, sin transparencia)
+- Capturas de pantalla: faltan; Google Play pide al menos 2 del teléfono (se toman de la app ya instalada).

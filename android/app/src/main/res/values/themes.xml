@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Tema de ELARCAST: el de siempre (sin barra de título) con el fondo de inicio negro y el logo -->
+    <style name="ElarcastTheme" parent="@android:style/Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_fondo</item>
+        <item name="android:statusBarColor">@color/elarcast_negro</item>
+        <item name="android:navigationBarColor">@color/elarcast_negro</item>
+    </style>
+</resources>
