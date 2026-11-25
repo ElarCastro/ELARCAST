@@ -2641,6 +2641,8 @@ mp3Busy = true; msg(`${video ? 'Video' : 'MP3'}: ${n} ${n > 1 ? 'descargas' : 'd
   let mobPrev = null;
   function mobFix() {
     const keys = MOB.map(m => m[1]).concat(['showHelp']);
+    // 1.7.1: si desde la vista de TV se abre otra pestaña (Lista, Buscar, Ecualiz., Más o Ayuda), se sale de la vista de TV
+    if (mobPrev && S.showScr && S.showLib && keys.some(k => k !== 'showScr' && k !== 'showLib' && S[k] && !mobPrev[k])) { S.showScr = false; S.showLib = false; }
     const splitTv = !!(S.showScr && S.showLib && el.libWin.classList.contains('tvcompact'));
     document.body.classList.toggle('tvbrowse',splitTv);
     if (splitTv) {

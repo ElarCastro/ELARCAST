@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/ElarCastro/ELARCAST/releases/latest"><img src="https://img.shields.io/badge/versión-1.7-2F6BFF?style=for-the-badge" alt="Versión 1.7"></a>
+  <a href="https://github.com/ElarCastro/ELARCAST/releases/latest"><img src="https://img.shields.io/badge/versión-1.7.1-2F6BFF?style=for-the-badge" alt="Versión 1.7.1"></a>
   <img src="https://img.shields.io/badge/Android-8.0%2B-00E5FF?style=for-the-badge&logo=android&logoColor=white" alt="Android 8.0 o superior">
   <img src="https://img.shields.io/badge/precio-gratis-9B4DFF?style=for-the-badge" alt="Gratis">
 </p>
@@ -23,7 +23,7 @@
 |---|---|
 | 🎵 **Tu música** | La música del celular ordenada por artista y álbum, con listas de reproducción que puedes guardar. |
 | 🔎 **Buscar** | Encuentra canciones y videos y añádelos a tu lista con un toque. |
-| 📺 **TV en vivo** | Canales abiertos por internet de varios países, por idioma y categoría, con guía de programación. |
+| 📺 **TV en vivo** | Reproductor arriba y canales debajo; miles de canales abiertos por internet con filtros por lista y categoría, búsqueda de canales y programas, y guía de programación. |
 | 📻 **Radios** | Emisoras de todo el mundo por país y género; guarda tus favoritas con ☆. |
 | 🌈 **Visualizaciones** | Efectos que bailan con la música y videos a pantalla completa (giran a horizontal). |
 | 🎚️ **Ecualizador** | 10 bandas con ajustes para Rock, Pop, Latino, Más graves, Voz y más, y nivelador de volumen. |
@@ -34,22 +34,25 @@
 
 <table>
   <tr>
-    <td align="center"><img src="branding/capturas/01-inicio.png" width="190" alt="Pantalla de inicio"><br><sub>Inicio</sub></td>
-    <td align="center"><img src="branding/capturas/02-lista.png" width="190" alt="Lista de reproducción"><br><sub>Lista de reproducción</sub></td>
-    <td align="center"><img src="branding/capturas/03-buscar.png" width="190" alt="Buscar"><br><sub>Buscar</sub></td>
-    <td align="center"><img src="branding/capturas/04-efectos.png" width="190" alt="Visualizaciones"><br><sub>Visualizaciones</sub></td>
+    <td align="center"><img src="branding/capturas/01-inicio.png" width="230" alt="Pantalla de inicio"><br><sub>Inicio</sub></td>
+    <td align="center"><img src="branding/capturas/09-tv-en-vivo.png" width="230" alt="TV en vivo: reproductor y canales"><br><sub><b>Nuevo:</b> TV en vivo</sub></td>
+    <td align="center"><img src="branding/capturas/07-tv.png" width="230" alt="Lista de canales"><br><sub>Canales con búsqueda y filtros</sub></td>
   </tr>
   <tr>
-    <td align="center"><img src="branding/capturas/05-ecualizador.png" width="190" alt="Ecualizador"><br><sub>Ecualizador</sub></td>
-    <td align="center"><img src="branding/capturas/06-radios.png" width="190" alt="Radios"><br><sub>Radios por internet</sub></td>
-    <td align="center"><img src="branding/capturas/07-tv.png" width="190" alt="TV en vivo"><br><sub>TV en vivo</sub></td>
-    <td align="center"><img src="branding/capturas/08-acerca.png" width="190" alt="Acerca de"><br><sub>Acerca de</sub></td>
+    <td align="center"><img src="branding/capturas/02-lista.png" width="230" alt="Lista de reproducción"><br><sub>Lista de reproducción</sub></td>
+    <td align="center"><img src="branding/capturas/03-buscar.png" width="230" alt="Buscar"><br><sub>Buscar</sub></td>
+    <td align="center"><img src="branding/capturas/04-efectos.png" width="230" alt="Visualizaciones"><br><sub>Visualizaciones</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="branding/capturas/05-ecualizador.png" width="230" alt="Ecualizador"><br><sub>Ecualizador</sub></td>
+    <td align="center"><img src="branding/capturas/06-radios.png" width="230" alt="Radios"><br><sub>Radios por internet</sub></td>
+    <td align="center"><img src="branding/capturas/08-acerca.png" width="230" alt="Acerca de"><br><sub>Acerca de</sub></td>
   </tr>
 </table>
 
 ## ⬇️ Instalación
 
-1. En tu celular, abre **[Releases](https://github.com/ElarCastro/ELARCAST/releases/latest)** y descarga **`ELARCAST-1.7-android.apk`**.
+1. En tu celular, abre **[Releases](https://github.com/ElarCastro/ELARCAST/releases/latest)** y descarga **`ELARCAST-1.7.1-android.apk`**.
 2. Abre el archivo descargado.
 3. Como no viene de Google Play, Android pedirá **«Permitir instalar apps de esta fuente»**: actívalo para tu navegador o explorador de archivos y vuelve atrás.
 4. Pulsa **Instalar** y abre **ELARCAST**.
