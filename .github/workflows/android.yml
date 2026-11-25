@@ -1,9 +1,9 @@
-# Compila ELARCAST (antes RetroAmp) para Android (APK) en los equipos de GitHub y lo deja en el lanzamiento "android-pruebas".
+# Compila ELARCAST para Android (APK) en los equipos de GitHub y lo deja en el lanzamiento "android-pruebas".
 name: Android APK
 on:
   push:
     branches: [main]
-    paths: ['android/**', 'RetroAmp.html', 'lib/**', '.github/workflows/android.yml']
+    paths: ['android/**', 'elarcast.html', 'lib/**', '.github/workflows/android.yml']
   workflow_dispatch:
 permissions:
   contents: write
@@ -25,7 +25,7 @@ jobs:
       - name: Copiar la interfaz al APK
         run: |
           mkdir -p android/app/src/main/assets/www/lib android/app/src/main/assets/www/fonts
-          cp RetroAmp.html android/app/src/main/assets/www/
+          cp elarcast.html android/app/src/main/assets/www/
           cp lib/hls.min.js android/app/src/main/assets/www/lib/
           cp VT323-Regular.ttf android/app/src/main/assets/www/fonts/
       - name: Llave de firma (si está en los secretos del repositorio)
