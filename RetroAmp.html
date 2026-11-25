@@ -4,7 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>RetroAmp</title>
+<script>
+  // ELARCAST (Android): no mostrar la página hasta que esté puesta la marca (evita ver un instante la interfaz de escritorio)
+  if (window.RA && !(window.chrome && window.chrome.webview)) document.documentElement.classList.add('android-boot');
+</script>
 <style>
+  html.android-boot, html.android-boot body{background:#05060F}
+  html.android-boot body > *:not(#ecSplash){visibility:hidden}
   @font-face{font-family:VT323;font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/VT323-Regular.ttf) format('truetype')}
   /* ---------- Temas ---------- */
   body{
@@ -1428,6 +1434,7 @@
     const sp = document.createElement('div'); sp.id = 'ecSplash';
     sp.innerHTML = `<div class="ecs-in">${ecLogo()}<b>ELARCAST</b><i>MULTIMEDIA PLAYER</i><span class="ecs-bar"></span><small>Creación: Elar Castro con la IA</small></div>`;
     document.body.appendChild(sp);
+    document.documentElement.classList.remove('android-boot');
     const spOff = () => { sp.classList.add('off'); setTimeout(() => sp.remove(), 600); };
     sp.addEventListener('click', spOff);
     setTimeout(spOff, 1800);
