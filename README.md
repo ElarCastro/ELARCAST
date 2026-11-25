@@ -5,7 +5,7 @@
 
 ---
 
-ELARCAST es un reproductor multimedia para Android (antes **RetroAmp** para Android): música del celular, videos, TV en vivo y radios por internet en una sola app.
+ELARCAST es un reproductor multimedia para Android: música del celular, videos, TV en vivo y radios por internet en una sola app.
 
 ## Funciones
 
@@ -20,18 +20,18 @@ ELARCAST es un reproductor multimedia para Android (antes **RetroAmp** para Andr
 ## Descarga
 
 La APK se compila sola con GitHub Actions en cada cambio y queda en **Releases › ELARCAST Android (pruebas)**.
-Requiere Android 8.0 o superior. Se instala encima de RetroAmp para Android y conserva listas y ajustes.
+Requiere Android 8.0 o superior. Si ya tenías la versión anterior, se instala encima y conserva tus listas y ajustes.
 
 ## Estructura
 
 | Carpeta / archivo | Contenido |
 |---|---|
 | `android/` | Proyecto de Android (Gradle) |
-| `RetroAmp.html` | Interfaz de la app (se copia al APK al compilar) |
+| `elarcast.html` | Interfaz de la app (se copia al APK al compilar) |
 | `lib/`, `VT323-Regular.ttf` | Reproductor HLS y fuente de la pantalla LCD |
 | `branding/` | Logotipo, iconos y recursos para Google Play |
 | `.github/workflows/android.yml` | Compilación automática del APK |
 
 ## Compilar
 
-GitHub Actions lo hace solo. A mano: JDK 17, Android SDK 35 y Gradle 8.10.2; copiar `RetroAmp.html`, `lib/hls.min.js` y `VT323-Regular.ttf` a `android/app/src/main/assets/www/` (como hace el flujo) y ejecutar `gradle assembleRelease` dentro de `android/`.
+GitHub Actions lo hace solo. A mano: JDK 17, Android SDK 35 y Gradle 8.10.2; copiar `elarcast.html`, `lib/hls.min.js` y `VT323-Regular.ttf` a `android/app/src/main/assets/www/` (como hace el flujo) y ejecutar `gradle assembleRelease` dentro de `android/`.
