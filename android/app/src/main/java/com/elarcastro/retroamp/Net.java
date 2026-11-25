@@ -16,7 +16,7 @@ import okhttp3.ResponseBody;
 
 /** Conexiones a internet (un solo cliente para toda la app). */
 public final class Net {
-    public static final String UA = "Mozilla/5.0 (Linux; Android 13) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Mobile Safari/537.36 RetroAmp";
+    public static final String UA = "Mozilla/5.0 (Linux; Android 13) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Mobile Safari/537.36 ELARCAST";
 
     public static final OkHttpClient C = new OkHttpClient.Builder()
             .connectTimeout(15, TimeUnit.SECONDS)

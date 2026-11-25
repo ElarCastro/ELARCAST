@@ -144,7 +144,7 @@ public final class Proxy {
 
     /** Radio por internet: se reenvía la transmisión tal cual (también las radios antiguas "ICY 200 OK"). */
     public static void radio(Http.Res s, String url) throws IOException {
-        Request rq = new Request.Builder().url(url).header("User-Agent", "RetroAmp").header("Icy-MetaData", "0").build();
+        Request rq = new Request.Builder().url(url).header("User-Agent", "ELARCAST").header("Icy-MetaData", "0").build();
         Response resp;
         try { resp = Net.STREAM.newCall(rq).execute(); }
         catch (IOException e) {
@@ -181,7 +181,7 @@ public final class Proxy {
             so.setSoTimeout(40000);
             String path = u.getFile().isEmpty() ? "/" : u.getFile();
             OutputStream o = so.getOutputStream();
-            o.write(("GET " + path + " HTTP/1.0\r\nHost: " + u.getHost() + "\r\nUser-Agent: RetroAmp\r\nIcy-MetaData: 0\r\nConnection: close\r\n\r\n").getBytes(StandardCharsets.ISO_8859_1));
+            o.write(("GET " + path + " HTTP/1.0\r\nHost: " + u.getHost() + "\r\nUser-Agent: ELARCAST\r\nIcy-MetaData: 0\r\nConnection: close\r\n\r\n").getBytes(StandardCharsets.ISO_8859_1));
             o.flush();
             InputStream in = so.getInputStream();
             String l; String type = "audio/mpeg";

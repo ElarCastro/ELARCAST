@@ -32,7 +32,7 @@ import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.List;
 
-/** RetroAmp para Android: la misma página del programa de Windows dentro de un WebView, con su motor local. */
+/** ELARCAST (antes RetroAmp para Android): la página de la app dentro de un WebView, con su motor local. */
 public class MainActivity extends Activity {
     static volatile MainActivity inst;
     static Http http;
@@ -87,7 +87,7 @@ public class MainActivity extends Activity {
         ws.setMediaPlaybackRequiresUserGesture(false);
         ws.setAllowFileAccess(false);
         ws.setTextZoom(100);
-        ws.setUserAgentString(ws.getUserAgentString() + " RetroAmpAndroid/" + version());
+        ws.setUserAgentString(ws.getUserAgentString() + " ElarcastAndroid/" + version());
         CookieManager.getInstance().setAcceptCookie(true);
         web.setBackgroundColor(Color.BLACK);
         web.addJavascriptInterface(new Bridge(), "RA");

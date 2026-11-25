@@ -24,7 +24,7 @@ public final class NpDownloader extends Downloader {
         byte[] data = request.dataToSend();
         RequestBody body = data != null ? RequestBody.create(data) : null;
         okhttp3.Request.Builder b = new okhttp3.Request.Builder().url(request.url()).method(method, body)
-                .header("User-Agent", Net.UA.replace(" RetroAmp", ""));
+                .header("User-Agent", Net.UA.replace(" ELARCAST", ""));
         for (Map.Entry<String, List<String>> e : request.headers().entrySet()) {
             String k = e.getKey();
             b.removeHeader(k);

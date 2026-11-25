@@ -24,7 +24,7 @@ import okhttp3.Request;
 import okhttp3.Response;
 import okhttp3.ResponseBody;
 
-/** Mantiene sonando RetroAmp con la pantalla apagada y pone los controles en la notificación y la pantalla de bloqueo. */
+/** Mantiene sonando ELARCAST con la pantalla apagada y pone los controles en la notificación y la pantalla de bloqueo. */
 public class PlayerService extends Service {
     static final String CH = "reproduccion";
     static final int ID = 1;
@@ -77,7 +77,7 @@ public class PlayerService extends Service {
             ch.setShowBadge(false);
             nm.createNotificationChannel(ch);
         }
-        session = new MediaSessionCompat(this, "RetroAmp");
+        session = new MediaSessionCompat(this, "ELARCAST");
         session.setCallback(new MediaSessionCompat.Callback() {
             @Override public void onPlay() { MainActivity.js("window.raCmd&&raCmd('play')"); }
             @Override public void onPause() { MainActivity.js("window.raCmd&&raCmd('pause')"); }
@@ -87,7 +87,7 @@ public class PlayerService extends Service {
         });
         session.setActive(true);
         PowerManager pm = (PowerManager) getSystemService(POWER_SERVICE);
-        wake = pm.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, "RetroAmp:reproduccion");
+        wake = pm.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, "ELARCAST:reproduccion");
         wake.setReferenceCounted(false);
         running = true;
     }

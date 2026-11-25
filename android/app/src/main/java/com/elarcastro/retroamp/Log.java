@@ -10,7 +10,7 @@ import java.util.Locale;
 public final class Log {
     static File file;
     public static synchronized void w(String m) {
-        android.util.Log.w("RetroAmp", m);
+        android.util.Log.w("ELARCAST", m);
         if (file == null) return;
         try {
             if (file.length() > 512 * 1024) file.delete();

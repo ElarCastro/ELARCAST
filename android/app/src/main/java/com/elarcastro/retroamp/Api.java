@@ -96,11 +96,14 @@ public final class Api implements Http.Handler {
     public void handle(Http.Req r, Http.Res s) throws Exception {
         String path = r.path;
         boolean viaQuery = token.equals(r.q1("k"));
-        if (!viaQuery && !token.equals(r.cookie("wyt"))) { s.bytes(403, "text/plain; charset=utf-8", "RetroAmp: acceso no permitido".getBytes(StandardCharsets.UTF_8), null); return; }
+        if (!viaQuery && !token.equals(r.cookie("wyt"))) { s.bytes(403, "text/plain; charset=utf-8", "ELARCAST: acceso no permitido".getBytes(StandardCharsets.UTF_8), null); return; }
 
-        if (path.equals("/") || path.equals("/index.html") || path.equals("/RetroAmp.html")) {
+        if (path.equals("/") || path.equals("/index.html") || path.equals("/elarcast.html")) {
             String cookie = viaQuery ? "Set-Cookie: wyt=" + token + "; Path=/; HttpOnly; SameSite=Strict\r\n" : null;
-            s.bytes(200, "text/html; charset=utf-8", asset("www/RetroAmp.html"), cookie);
+            byte[] page;
+            try { page = asset("www/elarcast.html"); }
+            catch (IOException e) { page = asset("www/RetroAmp.html"); }   // nombre anterior de la página
+            s.bytes(200, "text/html; charset=utf-8", page, cookie);
             return;
         }
         if (path.startsWith("/fonts/") || path.startsWith("/lib/") || path.equals("/favicon.ico")) { staticFile(s, path); return; }
