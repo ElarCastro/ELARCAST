@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/ElarCastro/ELARCAST/releases/latest"><img src="https://img.shields.io/badge/versión-1.5-2F6BFF?style=for-the-badge" alt="Versión 1.5"></a>
+  <a href="https://github.com/ElarCastro/ELARCAST/releases/latest"><img src="https://img.shields.io/badge/versión-1.7-2F6BFF?style=for-the-badge" alt="Versión 1.7"></a>
   <img src="https://img.shields.io/badge/Android-8.0%2B-00E5FF?style=for-the-badge&logo=android&logoColor=white" alt="Android 8.0 o superior">
   <img src="https://img.shields.io/badge/precio-gratis-9B4DFF?style=for-the-badge" alt="Gratis">
 </p>
@@ -49,7 +49,7 @@
 
 ## ⬇️ Instalación
 
-1. En tu celular, abre **[Releases](https://github.com/ElarCastro/ELARCAST/releases/latest)** y descarga **`ELARCAST-1.5-android.apk`**.
+1. En tu celular, abre **[Releases](https://github.com/ElarCastro/ELARCAST/releases/latest)** y descarga **`ELARCAST-1.7-android.apk`**.
 2. Abre el archivo descargado.
 3. Como no viene de Google Play, Android pedirá **«Permitir instalar apps de esta fuente»**: actívalo para tu navegador o explorador de archivos y vuelve atrás.
 4. Pulsa **Instalar** y abre **ELARCAST**.
